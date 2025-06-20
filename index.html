@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Analytics Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AI Analytics Dashboard</h1>
+      <button id="toggle-theme">🌗 Toggle Theme</button>
+    </header>
+
+    <section class="input-section">
+      <select id="citySelector">
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Chennai">Chennai</option>
+      </select>
+      <button onclick="getWeather()">Get Weather</button>
+      <span id="loading">🔄</span>
+    </section>
+
+    <section class="cards">
+      <div class="card" id="weather-card">
+        <h2>Weather</h2>
+        <p id="weather-data">Loading...</p>
+      </div>
+      <div class="card" id="insight-card">
+        <h2>AI Suggestion</h2>
+        <p id="ai-suggestion">Loading...</p>
+      </div>
+      <div class="card" id="crypto-card">
+        <h2>Bitcoin Price</h2>
+        <p id="crypto-data">Loading...</p>
+      </div>
+    </section>
+
+    <section class="chart-section">
+      <canvas id="weatherChart"></canvas>
+      <canvas id="cryptoChart"></canvas>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
